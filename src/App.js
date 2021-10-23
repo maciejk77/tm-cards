@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const BASE_URL = 'http://localhost:8080/';
+
+const App = () => {
+  const [data, setData] = useState([]);
+
+  console.log(data);
+
+  const fetchCards = async () => {
+    const request = await fetch(BASE_URL);
+    const { cards } = await request.json();
+    setData(cards);
+  };
+
+  useEffect(() => {
+    fetchCards();
+  }, []);
+
+  return <div>Learn React</div>;
+};
 
 export default App;
