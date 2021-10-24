@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cards = require('./data/credit_cards.json');
 
-app.use(function (req, res, next) {
+app.use((_, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header(
     'Access-Control-Allow-Headers',

@@ -1,23 +1,17 @@
-import { useState, useEffect } from 'react';
-
-const BASE_URL = 'http://localhost:8080/';
+import Form from './components/Form';
+import List from './components/List';
+import { useSelector } from 'react-redux';
 
 const App = () => {
-  const [data, setData] = useState([]);
+  console.log(useSelector((state) => state));
 
-  console.log(data);
-
-  const fetchCards = async () => {
-    const request = await fetch(BASE_URL);
-    const { cards } = await request.json();
-    setData(cards);
-  };
-
-  useEffect(() => {
-    fetchCards();
-  }, []);
-
-  return <div>Learn React</div>;
+  return (
+    <div>
+      <Form />
+      <List />
+      {/* <div>SUM</div> */}
+    </div>
+  );
 };
 
 export default App;
