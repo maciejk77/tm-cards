@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 const List = () => {
-  const cards = useSelector((state) => state.cards);
+  const cards = useSelector(({ cards }) => cards);
 
   return cards.map(({ id, name, status }) => (
     <div key={id} style={styles.listWrapper}>

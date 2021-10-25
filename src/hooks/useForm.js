@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import useData from '../hooks/useData';
-import { FETCH_CARDS, INITIAL_DATA, SET_CUSTOMER_DATA } from '../constants';
+import { INITIAL_DATA } from '../constants';
+import { updateStoreData } from '../thunks';
 
 const useForm = () => {
   const [form, setForm] = useState(INITIAL_DATA);
-
-  const { data } = useData();
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -17,8 +15,7 @@ const useForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch({ type: SET_CUSTOMER_DATA, payload: form });
-    dispatch({ type: FETCH_CARDS, payload: data });
+    dispatch(updateStoreData(form));
     setForm(INITIAL_DATA);
   };
 

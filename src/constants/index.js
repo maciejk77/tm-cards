@@ -1,6 +1,9 @@
 export const FETCH_CARDS = 'FETCH_CARDS';
 export const SELECTED_CARDS = 'SELECTED_CARDS';
-export const SET_CUSTOMER_DATA = 'SET_CUSTOMER_DATA';
+export const UPDATE_STORE_DATA = 'UPDATE_STORE_DATA';
+
+export const STATUS_STUDENT = 'Student';
+export const STATUS_ALL = 'All';
 
 export const INITIAL_DATA = {
   title: '',
@@ -14,3 +17,5 @@ export const INITIAL_DATA = {
 };
 
 export const BASE_URL = 'http://localhost:8080/';
+
+export const MIN_REQUIRED_INCOME = 16000;

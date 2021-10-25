@@ -2,15 +2,6 @@
   "cards": [
     {
       "id": 1,
-      "name": "Student Life Card",
-      "status": "Student",
-      "apr": 18.9,
-      "balance_months": 0,
-      "purchase_months": 6,
-      "credit_available": 1200
-    },
-    {
-      "id": 2,
       "name": "Anywhere Card",
       "status": "All",
       "apr": 33.9,
@@ -19,13 +10,22 @@
       "credit_available": 300
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Liquid Card",
       "status": 16000,
       "apr": 33.9,
       "balance_months": 12,
       "purchase_months": 6,
       "credit_available": 3000
+    },
+    {
+      "id": 3,
+      "name": "Student Life Card",
+      "status": "Student",
+      "apr": 18.9,
+      "balance_months": 0,
+      "purchase_months": 6,
+      "credit_available": 1200
     }
   ]
 }
