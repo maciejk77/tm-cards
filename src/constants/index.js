@@ -17,6 +17,6 @@ export const INITIAL_DATA = {
   postcode: '',
 };
 
-export const BASE_URL = 'http://localhost:8080/';
+export const BASE_URL = 'http://localhost:8080';
 
 export const MIN_REQUIRED_INCOME = 16000;
