@@ -1,5 +1,13 @@
 import { MIN_REQUIRED_INCOME, STATUS_STUDENT, STATUS_ALL } from '../constants';
 
+export const totalCredit = (cards) => {
+  const selectedCards = cards.filter(({ selected }) => selected);
+  return selectedCards.reduce(
+    (sum, { credit_available }) => sum + credit_available,
+    0
+  );
+};
+
 export const filter = ({ annualIncome, employmentStatus }, cards) => {
   const isStudent = employmentStatus === STATUS_STUDENT;
   const hasMinimumIncome = Number(annualIncome) >= MIN_REQUIRED_INCOME;

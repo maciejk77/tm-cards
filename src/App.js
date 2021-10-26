@@ -1,12 +1,13 @@
 import Form from './components/Form';
 import List from './components/List';
+import TotalCredit from './components/TotalCredit';
 
 const App = () => {
   return (
     <div>
       <Form />
       <List />
-      {/* <div>SUM</div> */}
+      <TotalCredit />
     </div>
   );
 };
