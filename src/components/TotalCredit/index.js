@@ -6,7 +6,10 @@ const TotalCredit = () => {
 
   return (
     <div>
-      <div>Total Credit {totalCredit(cards)}</div>
+      <div>
+        Total Credit
+        <span data-testid="total_credit">{totalCredit(cards)}</span>
+      </div>
     </div>
   );
 };

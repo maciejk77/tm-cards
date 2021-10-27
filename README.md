@@ -13,11 +13,13 @@
 
 ## Completed
 
-- as per requirements list
+- As per requirements list
 
 ## To be done
 
 - RWD
-- styling
-- tests
-- form validation, formatting entries
+- Styling
+- Tests (additional, Cypress?)
+- Form validation, formatting entries
+- Form select dropdown for title, employment status?
+- moving integrations tests, add component unit test, test redux and helpers pure functions

@@ -15,7 +15,7 @@ const List = () => {
       credit_available,
       selected,
     }) => (
-      <div key={id} style={styles.listWrapper}>
+      <div data-testid="card" key={id} style={styles.listWrapper}>
         <ul style={styles.list}>
           <li style={styles.listItem}>{name}</li>
           <li style={styles.listItem}>APR: {apr}</li>
@@ -27,7 +27,10 @@ const List = () => {
           </li>
           <li style={styles.listItem}>Credit Available: £{credit_available}</li>
         </ul>
-        <div onClick={() => dispatch(toggleCardSelected(id))}>
+        <div
+          data-testid="selected_card"
+          onClick={() => dispatch(toggleCardSelected(id))}
+        >
           {selected ? 'Remove' : 'Add'}
         </div>
       </div>
