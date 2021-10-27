@@ -7,12 +7,18 @@ const Form = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="title">Title</label>
-        <input name="title" onChange={handleChange} value={form.title} />
+        <input
+          data-testid="title"
+          name="title"
+          onChange={handleChange}
+          value={form.title}
+        />
       </div>
 
       <div>
         <label htmlFor="firstName">First Name</label>
         <input
+          data-testid="first_name"
           name="firstName"
           onChange={handleChange}
           value={form.firstName}
@@ -21,17 +27,28 @@ const Form = () => {
 
       <div>
         <label htmlFor="lastName">Last Name</label>
-        <input name="lastName" onChange={handleChange} value={form.lastName} />
+        <input
+          data-testid="last_name"
+          name="lastName"
+          onChange={handleChange}
+          value={form.lastName}
+        />
       </div>
 
       <div>
         <label htmlFor="dob">DOB</label>
-        <input name="dob" onChange={handleChange} value={form.dob} />
+        <input
+          data-testid="dob"
+          name="dob"
+          onChange={handleChange}
+          value={form.dob}
+        />
       </div>
 
       <div>
         <label htmlFor="employmentStatus">Employment Status</label>
         <input
+          data-testid="employment_status"
           name="employmentStatus"
           onChange={handleChange}
           value={form.employmentStatus}
@@ -41,6 +58,7 @@ const Form = () => {
       <div>
         <label htmlFor="annualIncome">Annual Income</label>
         <input
+          data-testid="annual_income"
           name="annualIncome"
           onChange={handleChange}
           value={form.annualIncome}
@@ -50,6 +68,7 @@ const Form = () => {
       <div>
         <label htmlFor="houseNumber">House Number</label>
         <input
+          data-testid="house_number"
           name="houseNumber"
           onChange={handleChange}
           value={form.houseNumber}
@@ -58,7 +77,12 @@ const Form = () => {
 
       <div>
         <label htmlFor="postcode">Postcode</label>
-        <input name="postcode" onChange={handleChange} value={form.postcode} />
+        <input
+          data-testid="postcode"
+          name="postcode"
+          onChange={handleChange}
+          value={form.postcode}
+        />
       </div>
 
       <button type="submit">Submit</button>

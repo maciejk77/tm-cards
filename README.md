@@ -8,7 +8,7 @@
 ## Extras
 
 - Responsiveness (TBC)
-- Mock endpoints (completed)
+- Mock endpoints (completed?)
 - Express server (completed)
 
 ## Completed
@@ -17,5 +17,7 @@
 
 ## To be done
 
+- RWD
 - styling
 - tests
+- form validation, formatting entries
