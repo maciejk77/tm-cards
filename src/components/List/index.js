@@ -29,11 +29,10 @@ const List = () => {
       rules,
       selected,
     }) => (
-      <div className={wrapper}>
+      <div className={wrapper} key={id}>
         <div
           className={selected ? containerSelected : container}
           data-testid="card"
-          key={id}
         >
           <div className={listContainer}>
             <h2 className={title}>{name}</h2>

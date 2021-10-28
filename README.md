@@ -18,8 +18,7 @@
 ## To be done
 
 - RWD
-- Styling
 - Tests (additional, Cypress?)
 - Form validation, formatting entries
 - Form select dropdown for title, employment status?
-- moving integrations tests, add component unit test, test redux and helpers pure functions
+- moving integration tests, add component unit test, test redux and helpers pure functions?

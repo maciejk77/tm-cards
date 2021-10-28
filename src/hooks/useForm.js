@@ -15,6 +15,12 @@ const useForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (Object.values(form).every((el) => !el)) {
+      // continue with validation, refactor
+      console.log('No data provided before submission');
+      return;
+    }
+
     dispatch(updateStoreData(form));
     setForm(INITIAL_DATA);
   };
