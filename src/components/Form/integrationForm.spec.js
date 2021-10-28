@@ -46,14 +46,14 @@ describe('Form completion with the list of cards a customer is eligible for', ()
     fireEvent.click(submitButton, new MouseEvent('click'));
 
     // expect to find listed card 1, 2
-    const card1 = await screen.findByText(/Anywhere Card/i);
+    const card1 = await screen.findByText(/Anywhere Card/);
     await waitFor(() => expect(card1).toBeInTheDocument());
 
-    const card2 = await screen.findByText(/Liquid Card/i);
+    const card2 = await screen.findByText(/Liquid Card/);
     await waitFor(() => expect(card2).toBeInTheDocument());
 
     // below should not be listed
-    const card3 = screen.queryByText(/Student Card/i);
+    const card3 = screen.queryByText(/Student Card/);
   });
 
   it('renders 3 cards for Student, Income minimum or over', async () => {
@@ -91,13 +91,13 @@ describe('Form completion with the list of cards a customer is eligible for', ()
     fireEvent.click(submitButton, new MouseEvent('click'));
 
     // expect to find listed card 1, 2 and 3
-    const card1 = await screen.findByText(/Anywhere Card/i);
+    const card1 = await screen.findByText(/Anywhere Card/);
     await waitFor(() => expect(card1).toBeInTheDocument());
 
-    const card2 = await screen.findByText(/Liquid Card/i);
+    const card2 = await screen.findByText(/Liquid Card/);
     await waitFor(() => expect(card2).toBeInTheDocument());
 
-    const card3 = await screen.findByText(/Student Card/i);
+    const card3 = await screen.findByText(/Student Card/);
     await waitFor(() => expect(card3).toBeInTheDocument());
   });
 
@@ -136,11 +136,11 @@ describe('Form completion with the list of cards a customer is eligible for', ()
     fireEvent.click(submitButton, new MouseEvent('click'));
 
     // expect to find listed card 1 only
-    const card1 = await screen.findByText(/Anywhere Card/i);
+    const card1 = await screen.findByText(/Anywhere Card/);
     await waitFor(() => expect(card1).toBeInTheDocument());
 
     // below should not be listed
-    const card2 = screen.queryByText(/Liquid Card/i);
-    const card3 = screen.queryByText(/Student Card/i);
+    const card2 = screen.queryByText(/Liquid Card/);
+    const card3 = screen.queryByText(/Student Card/);
   });
 });

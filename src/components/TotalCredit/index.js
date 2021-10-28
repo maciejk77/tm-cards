@@ -11,7 +11,9 @@ const TotalCredit = () => {
       <div>Total Credit</div>
       <div data-testid="total_credit">£{totalCredit(cards)}</div>
     </div>
-  ) : null;
+  ) : (
+    <div data-testid="total_credit" />
+  );
 };
 
 export default TotalCredit;

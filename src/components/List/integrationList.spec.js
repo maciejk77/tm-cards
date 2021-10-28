@@ -31,7 +31,7 @@ describe('List of cards a customer is eligible for, with total credit selected',
 
     // total credit 0 to begin with, before form data submission
     const totalCredit = await screen.findByTestId('total_credit');
-    expect(totalCredit).toHaveTextContent('0');
+    expect(totalCredit).toHaveTextContent('');
 
     // find button for form submission
     const submitButton = await screen.findByRole('button', {

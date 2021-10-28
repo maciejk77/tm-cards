@@ -13,6 +13,7 @@ export default createUseStyles(
       borderRadius: 15,
       margin: 5,
       padding: 10,
+      width: 286,
     },
     containerSelected: {
       backgroundColor: theme.themeColour,
@@ -55,6 +56,7 @@ export default createUseStyles(
       fontSize: 13,
       margin: '2px 8px 10px',
       textAlign: 'center',
+      width: 286,
     },
   }),
   { name: 'list' }
