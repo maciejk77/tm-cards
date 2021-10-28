@@ -1,3 +1,8 @@
+## Instruction
+
+- `yarn start` to start server and client
+- `yarn test` to start tests
+
 ## Requirements
 
 - Familiarity with React and the use of components
