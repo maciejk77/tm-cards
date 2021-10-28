@@ -1,13 +1,18 @@
 import useForm from '../../hooks/useForm';
+import useStyles from './styles';
 
 const Form = () => {
   const { form, handleChange, handleSubmit } = useForm();
+  const { container, formItem, label, input, button } = useStyles();
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="title">Title</label>
+    <form className={container} onSubmit={handleSubmit}>
+      <div className={formItem}>
+        <label className={label} htmlFor="title">
+          Title:
+        </label>
         <input
+          className={input}
           data-testid="title"
           name="title"
           onChange={handleChange}
@@ -15,9 +20,12 @@ const Form = () => {
         />
       </div>
 
-      <div>
-        <label htmlFor="firstName">First Name</label>
+      <div className={formItem}>
+        <label className={label} htmlFor="firstName">
+          First Name:
+        </label>
         <input
+          className={input}
           data-testid="first_name"
           name="firstName"
           onChange={handleChange}
@@ -25,9 +33,12 @@ const Form = () => {
         />
       </div>
 
-      <div>
-        <label htmlFor="lastName">Last Name</label>
+      <div className={formItem}>
+        <label className={label} htmlFor="lastName">
+          Last Name:
+        </label>
         <input
+          className={input}
           data-testid="last_name"
           name="lastName"
           onChange={handleChange}
@@ -35,9 +46,12 @@ const Form = () => {
         />
       </div>
 
-      <div>
-        <label htmlFor="dob">DOB</label>
+      <div className={formItem}>
+        <label className={label} htmlFor="dob">
+          DOB:
+        </label>
         <input
+          className={input}
           data-testid="dob"
           name="dob"
           onChange={handleChange}
@@ -45,9 +59,12 @@ const Form = () => {
         />
       </div>
 
-      <div>
-        <label htmlFor="employmentStatus">Employment Status</label>
+      <div className={formItem}>
+        <label className={label} htmlFor="employmentStatus">
+          Employment:
+        </label>
         <input
+          className={input}
           data-testid="employment_status"
           name="employmentStatus"
           onChange={handleChange}
@@ -55,9 +72,12 @@ const Form = () => {
         />
       </div>
 
-      <div>
-        <label htmlFor="annualIncome">Annual Income</label>
+      <div className={formItem}>
+        <label className={label} htmlFor="annualIncome">
+          Annual Income:
+        </label>
         <input
+          className={input}
           data-testid="annual_income"
           name="annualIncome"
           onChange={handleChange}
@@ -65,9 +85,12 @@ const Form = () => {
         />
       </div>
 
-      <div>
-        <label htmlFor="houseNumber">House Number</label>
+      <div className={formItem}>
+        <label className={label} htmlFor="houseNumber">
+          House Number:
+        </label>
         <input
+          className={input}
           data-testid="house_number"
           name="houseNumber"
           onChange={handleChange}
@@ -75,9 +98,12 @@ const Form = () => {
         />
       </div>
 
-      <div>
-        <label htmlFor="postcode">Postcode</label>
+      <div className={formItem}>
+        <label className={label} htmlFor="postcode">
+          Postcode:
+        </label>
         <input
+          className={input}
           data-testid="postcode"
           name="postcode"
           onChange={handleChange}
@@ -85,7 +111,9 @@ const Form = () => {
         />
       </div>
 
-      <button type="submit">Submit</button>
+      <button className={button} type="submit">
+        Submit
+      </button>
     </form>
   );
 };

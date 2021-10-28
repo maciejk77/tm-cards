@@ -1,14 +1,18 @@
+import { ThemeProvider } from 'react-jss';
 import Form from './components/Form';
 import List from './components/List';
 import TotalCredit from './components/TotalCredit';
+import { theme } from './theme';
 
 const App = () => {
   return (
-    <div>
-      <Form />
-      <List />
-      <TotalCredit />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div style={{ minWidth: '320px' }}>
+        <Form />
+        <List />
+        <TotalCredit />
+      </div>
+    </ThemeProvider>
   );
 };
 

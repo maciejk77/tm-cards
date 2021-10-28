@@ -7,7 +7,8 @@
       "apr": 33.9,
       "balance_months": 0,
       "purchase_months": 0,
-      "credit_available": 300
+      "credit_available": 300,
+      "rules": "The anywhere card is available to anyone anywhere."
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "apr": 33.9,
       "balance_months": 12,
       "purchase_months": 6,
-      "credit_available": 3000
+      "credit_available": 3000,
+      "rules": "The Liquid card is a card available to customers who have an income of more than £16000."
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "apr": 18.9,
       "balance_months": 0,
       "purchase_months": 6,
-      "credit_available": 1200
+      "credit_available": 1200,
+      "rules": "The Student Life credit card is only available to customers with an employment status of Student."
     }
   ]
 }

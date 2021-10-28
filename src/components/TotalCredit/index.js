@@ -1,17 +1,17 @@
 import { useSelector } from 'react-redux';
 import { totalCredit } from '../../helpers';
+import useStyles from './styles';
 
 const TotalCredit = () => {
   const cards = useSelector(({ cards }) => cards);
+  const { container } = useStyles();
 
-  return (
-    <div>
-      <div>
-        Total Credit
-        <span data-testid="total_credit">{totalCredit(cards)}</span>
-      </div>
+  return cards.length ? (
+    <div className={container}>
+      <div>Total Credit</div>
+      <div data-testid="total_credit">£{totalCredit(cards)}</div>
     </div>
-  );
+  ) : null;
 };
 
 export default TotalCredit;

@@ -1,9 +1,22 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleCardSelected } from '../../actions';
+import useStyles from './styles';
 
 const List = () => {
   const dispatch = useDispatch();
   const cards = useSelector(({ cards }) => cards);
+  const {
+    wrapper,
+    container,
+    containerSelected,
+    listContainer,
+    title,
+    list,
+    listItem,
+    value,
+    listItemButton,
+    rulesText,
+  } = useStyles();
 
   return cards.map(
     ({
@@ -13,43 +26,47 @@ const List = () => {
       balance_months,
       purchase_months,
       credit_available,
+      rules,
       selected,
     }) => (
-      <div data-testid="card" key={id} style={styles.listWrapper}>
-        <ul style={styles.list}>
-          <li style={styles.listItem}>{name}</li>
-          <li style={styles.listItem}>APR: {apr}</li>
-          <li style={styles.listItem}>
-            Balance Transfer Offer Duration: {balance_months} months
-          </li>
-          <li style={styles.listItem}>
-            Purchase Offer Duration: {purchase_months} months
-          </li>
-          <li style={styles.listItem}>Credit Available: £{credit_available}</li>
-        </ul>
+      <div className={wrapper}>
         <div
-          data-testid="selected_card"
-          onClick={() => dispatch(toggleCardSelected(id))}
+          className={selected ? containerSelected : container}
+          data-testid="card"
+          key={id}
         >
-          {selected ? 'Remove' : 'Add'}
+          <div className={listContainer}>
+            <h2 className={title}>{name}</h2>
+            <ul className={list}>
+              <li className={listItem}>
+                Apr: <span className={value}>{apr}%</span>
+              </li>
+              <li className={listItem}>
+                Balance Transfer Offer Duration:{' '}
+                <span className={value}>{balance_months} months</span>
+              </li>
+              <li className={listItem}>
+                Purchase Offer Duration:{' '}
+                <span className={value}>{purchase_months} months</span>
+              </li>
+              <li className={listItem}>
+                Credit Available:{' '}
+                <span className={value}>£{credit_available}</span>
+              </li>
+            </ul>
+            <div
+              className={listItemButton}
+              data-testid="selected_card"
+              onClick={() => dispatch(toggleCardSelected(id))}
+            >
+              {selected ? 'Remove' : 'Add'}
+            </div>
+          </div>
         </div>
+        <div className={rulesText}>{rules}</div>
       </div>
     )
   );
-};
-
-const styles = {
-  listWrapper: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  list: {
-    border: '1px solid black',
-    listStyleType: 'none',
-    padding: 10,
-    width: '50%',
-  },
-  listItem: {},
 };
 
 export default List;
