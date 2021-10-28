@@ -2,10 +2,15 @@ import { createUseStyles } from 'react-jss';
 
 export default createUseStyles(
   (theme) => ({
+    grid: {
+      display: 'grid',
+      justifyContent: 'center',
+    },
     wrapper: {
-      display: 'flex',
+      display: 'grid',
       flexDirection: 'column',
       fontFamily: theme.baseFonts,
+      maxWidth: '468px',
     },
     // duplication
     container: {
@@ -13,7 +18,6 @@ export default createUseStyles(
       borderRadius: 15,
       margin: 5,
       padding: 10,
-      width: 286,
     },
     containerSelected: {
       backgroundColor: theme.themeColour,
@@ -24,9 +28,9 @@ export default createUseStyles(
     },
     // to refactor above
     listContainer: {
+      alignItems: 'center',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
     },
     title: {
       textAlign: 'center',
@@ -56,7 +60,21 @@ export default createUseStyles(
       fontSize: 13,
       margin: '2px 8px 10px',
       textAlign: 'center',
-      width: 286,
+    },
+    '@media (min-width: 768px)': {
+      grid: {
+        gridTemplateColumns: '50% 50%',
+      },
+    },
+    '@media (min-width: 992px)': {
+      grid: {
+        gridTemplateColumns: '33% 33% 33%',
+      },
+    },
+    '@media (min-width: 1200px)': {
+      grid: {
+        gridTemplateColumns: '25% 25% 25% 25%',
+      },
     },
   }),
   { name: 'list' }

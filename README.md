@@ -7,7 +7,7 @@
 
 ## Extras
 
-- Responsiveness (TBC)
+- Responsiveness (completed)
 - Mock endpoints (completed?)
 - Express server (completed)
 
@@ -17,7 +17,6 @@
 
 ## To be done
 
-- RWD
 - Tests (additional, Cypress?)
 - Form validation, formatting entries
 - Form select dropdown for title, employment status?

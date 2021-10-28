@@ -10,5 +10,7 @@ export const theme = {
   baseFonts: 'Arial,sans-serif',
 
   // breakpoints
-  breakpoint1: 750,
+  tablet: 768,
+  laptop: 992,
+  large: 1200,
 };

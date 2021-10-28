@@ -10,6 +10,7 @@ export default createUseStyles(
       fontFamily: theme.baseFonts,
       fontSize: 16,
       margin: 5,
+      maxWidth: theme.tablet,
       padding: 10,
     },
     formGroup: {
